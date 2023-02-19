@@ -8,6 +8,7 @@ function CreateArea(props) {
 
   function handleChange(event) {
     const { name, value } = event.target;
+
     setNote((prevNote) => {
       return {
         ...prevNote,
@@ -17,6 +18,10 @@ function CreateArea(props) {
   }
   function submitNote(event) {
     props.onAdd(note);
+    setNote({
+      title: "",
+      content: "",
+    });
     event.preventDefault();
   }
 
