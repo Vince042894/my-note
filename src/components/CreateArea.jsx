@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import AddBoxIcon from "@material-ui/icons/AddBox";
-import Zoom from "@material-ui/core/Zoom";
 
 function CreateArea(props) {
   const [isExpanded, setExpanded] = useState(false);
@@ -52,11 +50,10 @@ function CreateArea(props) {
           placeholder="Take a note..."
           rows={isExpanded ? 3 : 1}
         />
-        <Zoom in={isExpanded}>
-          <button onClick={submitNote}>
-            <AddBoxIcon />
-          </button>
-        </Zoom>
+        {isExpanded}
+        <button onClick={submitNote}>
+          <i class="fa-solid fa-plus"></i>
+        </button>
       </form>
     </div>
   );
