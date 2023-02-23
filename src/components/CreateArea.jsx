@@ -52,7 +52,7 @@ function CreateArea(props) {
         />
         {isExpanded}
         <button onClick={submitNote}>
-          <i class="fa-solid fa-plus"></i>
+          <i className="fa-solid fa-plus"></i>
         </button>
       </form>
     </div>
